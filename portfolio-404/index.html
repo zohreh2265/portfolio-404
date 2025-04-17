@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" 
+     />
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="##footer">Contact Us</a></li>
+            </ul>
+            <a href="#" class="btn">Subcribe</a>
+            <div class="toggle-btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="##footer">Contact Us</a></li>
+            <li><a href="#" class="btn">Subcribe</a></li>
+        </div>
+    </header>
+    
+    <script>
+        const toggleBtn= document.querySelector('.toggle-btn')
+        const toggleBtnIcon= document.querySelector('.toggle-btn i')
+        const dropDownMenu= document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+        }
+    </script>
+
+
+
+    <!-- _____________________menu________________________ -->
+
+    <div class="all">
+        <div class="right">
+            <h4>Hello, my name is</h4>
+            <h1>Shohreh</h1>
+            <h3>I'am Frontend Developer</h3>
+            <h5>
+                I'm a computer programming student AND I'm 
+                very happy that I chose the right path.
+                 (programming is not a job but a love).
+            </h5>
+            <div class="newslatter">
+                <form>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <input type="submit" name="submit" value="Lets Start">
+                </form>
+            </div>
+        </div>
+
+        <div class="left">
+            <img src="./img/shohreh01.png" alt="">
+        </div>
+    </div>
+
+    <!-- _____________________________Home_____________________________ -->
+
+    <article>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="./img/photo14483813435.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Repellat dicta eveniet quibusdam tempora quisquam assumenda perferendis quo cum, necessitatibus,
+                            veniam nihil qui quaerat blanditiis exercitationem illo voluptates nobis. Ullam, unde.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>App Development</span><br>Building Android/ios app</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021-Current</span><br>Designing Web</li>
+                                <li><span>2019-2021</span><br>Web app Development</li>
+                                <li><span>2016-2917</span><br>app</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX</li>
+                                <li><span>2016</span><br>MBA</li>
+                                <li><span>2014</span><br>BBA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        
+    </script>
+
+    <!-- _________________________________About Us__________________________________ -->
+
+    <div id="service">
+        <div class="title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="box">
+
+            <div class="card">
+                <i class='bx bx-menu' ></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Earum assumenda fugit quasi,
+                         natus inventore cum in ducimus id sit a voluptas 
+                         deleniti cupiditate ipsa dolorem animi odio officiis quo? Esse.
+                    </p>
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <i class='bx bx-user' ></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Earum assumenda fugit quasi,
+                         natus inventore cum in ducimus id sit a voluptas 
+                         deleniti cupiditate ipsa dolorem animi odio officiis quo? Esse.
+                    </p>
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <i class='bx bx-bell' ></i>
+                <h5>Web Development</h5>
+                <div class="pra">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Earum assumenda fugit quasi,
+                         natus inventore cum in ducimus id sit a voluptas 
+                         deleniti cupiditate ipsa dolorem animi odio officiis quo? Esse.
+                    </p>
+                    <p style="text-align: center;">
+                        <a class="button" href="#">Read More</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- _________________________________service________________________________ -->
+
+    <div class="contact-me">
+        <p>Let Me Get You A Beautiful WebSite.</p>
+        <a class="button-two" href="#">Hire Me</a>
+    </div>
+    <!-- __________________contact____________________ -->
+     <footer id="#footer">
+        <p>SHOHREH OKHRAVI</p>
+        <P>
+            For more HTML,CSS AND JS coding tutorial-please
+            click on the link below to subscribe to my channel:
+        </P>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+        <p class="end">CopyRight By Shohreh Okhravi</p>
+     </footer>
+     <!-- _______________footer________________ -->
+</body>
+</html>
